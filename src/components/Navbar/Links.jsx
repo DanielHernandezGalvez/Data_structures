@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import cart from './cart.png'
 
 const Links = () => {
@@ -6,16 +7,16 @@ const Links = () => {
              <div className="menu">
                     <ul>
                         <li>
-                            <a href='/' className='menu-h1'>
+                            <Link href='/' className='menu-h1'>
                                 
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="#home">
+                            <Link to='/producto'>
                                 Mancuernas
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <a href="#categorias">
@@ -27,10 +28,13 @@ const Links = () => {
                                 Accesorios
                             </a>
                         </li>
+                        <Link to='/carrito'>
                         <button className='btn-carrito '>
                                 carrito
                                 <img src={cart} width='20px' alt='carrito' />
                             </button>
+                        </Link>
+                        
                     </ul>
                 </div>
         </>
