@@ -2,9 +2,9 @@ import logo from './logo.png'
 const Logo = () => {
     return (
         <>
-        <a href="#" class="menu-logo">
-            <img src={logo}  alt='logo' />  
-            </a>  
+        <a href='/' className='menu-logo'>
+      <img src={logo}  alt='...'/>
+      </a>
         </>
     );
 }

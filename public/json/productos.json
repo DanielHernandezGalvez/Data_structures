@@ -1,0 +1,50 @@
+[
+    {
+      "precio": 2600,
+      "id": 1,
+      "title": "Mancuerna hexagonal 20 lb",
+      "img": "1.png",
+      "category": "Mancuernas",
+      "stock": 10
+    },
+    {
+      "precio": 1300,
+      "id": 2,
+      "title": "Mancuernas aerobics de 3 lb",
+      "img": "2.png",
+      "category": "Mancuernas",
+      "stock": 10
+    },
+    {
+      "precio": 3100,
+      "id": 3,
+      "title": "Juego básico de mancuernas",
+      "img": "3.png",
+      "category": "Mancuernas",
+      "stock": 10
+    },
+    {
+      "precio": 1500,
+      "id": 4,
+      "title": "Mancuernas aerobics de 5 lb",
+      "img": "4.png",
+      "category": "Mancuernas",
+      "stock": 10
+    },
+    {
+      "precio": 1700,
+      "id": 5,
+      "title": "Mancuernas hexagonales de 5lb",
+      "img": "5.png",
+      "category": "Mancuernas",
+      "stock": 10
+    },
+    {
+      "precio": 4000,
+      "id": 6,
+      "title": "Juego de mancuernas ajustables",
+      "img": "6.png",
+      "category": "Mancuernas",
+      "stock": 10
+    }
+  ]

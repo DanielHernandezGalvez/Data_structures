@@ -1,212 +1,143 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-
-
-.menu-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  background: #fafafa;
-  color: #9a9a9a;
-  padding: 20px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-}
-
-.menu-logo {
-  line-height: 0;
-  margin: 0 20px;
-}
-
-.menu-logo img {
-  max-height: 40px;
-  max-width: 100px;
-  flex-shrink: 0;
-}
-
-.menu-container a {
-  text-decoration: none;
+h1{
   color: #fafafa;
-  transition: color 0.3s ease;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.menu-container a:hover {
-  color: #00C6A7;
+
+
+
+/* Cards */
+.container{
+  padding-left: 6%;
+  margin:0;
+  float:left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:25%;
+  max-width: 900;
+  height: auto;
 }
 
-.menu-container input {
-  display: block;
-  width: 35px;
-  height: 25px;
-  margin: 0;
-  position: absolute;
+.card{
+  width: 100%;
+  perspective: 1000px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
+  margin: 0 -5px;
 }
 
-/* Burger menu */
-.menu-container span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+
+
+.card-inner{
   position: relative;
-  background: #9a9a9a;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
-.menu-container span:first-child {
-  transform-origin: 0% 0%;
+.front-face{
+  backface-visibility: hidden;
 }
 
-.menu-container span:nth-child(3) {
-  transform-origin: 0% 100%;
+.front-face img{
+  width: 100%;
+  border-radius: 10px;
+}
+.front-face h2{
+  padding: 20px;
+  color: #333;
 }
 
-.menu-container input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(3px,-1px);
-  background: #fafafa;
+.back-face{
+  backface-visibility: hidden;
+  background: #54727D;
+  color: #fff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  transform: rotateY(180deg);
 }
 
-.menu-container input:checked ~ span:nth-child(4) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+.card:hover .card-inner{
+  transform: rotateY(-180deg);
 }
 
-.menu-container input:checked ~ span:nth-child(3) {
-  transform: rotate(-45deg) translate(-5px,11px);
+.back-face h2{
+  padding: 20px;
 }
 
-.menu ul {
-  list-style: none;
+.btn-comprar{
+  font-size: 100%;
+  font-weight: bolder;
+  font-family: sans-serif;
+  color: #fafafa;
+  background-color: #56C0E7;
+  border: none;
+  padding: 5px;
+  margin: auto;
+  border-radius: 5px;
 }
-
-.menu li {
-  padding: 10px 0;
-  font-size: 22px;
+.btn-comprar:hover{
+  background-color: #9a9a9a;
 }
-
-/* mobile styles */
-@media only screen and (max-width: 767px) { 
-  .menu-container {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .menu-logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .menu-logo img {
-    max-height: 30px;
-  }
-
-  .menu {
-    position: absolute;
-    box-sizing: border-box;
-    width: 300px;
-    right: -300px;
-    top: 0;
-    margin: -20px;
-    padding: 75px 50px 50px;
-    background: #9a9a9a;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translateX(0%);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-
-  .menu-container input:checked ~ .menu {
-    transform: translateX(-100%);
-  }
-}
-
-/* desktop styles */
-@media only screen and (min-width: 768px) { 
-  .menu-container {
-    width: 100%;
-  }
-
-  .menu-container a {
-    color: #9a9a9a;
-  }
-
-  .menu-container input {
-    display: none;
-  }
-
-  /* Burger menu */
-  .menu-container span {
-    display: none;
-  }
-
-  .menu {
-    position: relative;
-    width: 100%;
+@media screen and (max-width: 700px) {
+  .container {
+    width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-left: 12vw;
   }
+  .card{
+width: 80%;  }
+  h2{
+    font-size: medium;
+  }
+}
 
-  .menu ul {
-    display: flex;
-    padding: 0;
+@media screen and (min-width: 900px){
+  .card{
+    width: 80%;
   }
+}
+.btn-contador{
+  background-color: #56C0E7;
+  color: #fafafa;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.btn-contador:hover{
+  background-color: #9a9a9a;
 
-  .menu li {
-    padding: 0 20px;
-  }
+}
+
+.itemcount{
+  position:absolute ;
+  margin: 10px 10px 10px 10px;
+  border: solid #9a9a9a 1px;
+  padding: 5px;
+  display: flex;
+ 
+}
+
+.count{
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
 }

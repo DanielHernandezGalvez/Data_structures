@@ -1,17 +1,18 @@
-body {
-    overflow-x: hidden;
+body{
+  background-image: radial-gradient(circle at 49.31% 57.84%, #a7f0ff 0, #83d9f9 25%, #56c0e7 50%, #00a8d5 75%, #0092c6 100%);  overflow-x: hidden;
     font-family: Sans-Serif;
     margin: 0;
-  }
+}
   
   .menu-container {
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0px;
+    margin-top: 0px;
     background: #fafafa;
     color: #9a9a9a;
-    padding: 5px;
+    padding: 10px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -19,20 +20,7 @@ body {
     box-shadow:  0px 0px 6px 0 rgba(20,20,20, 0.2);
   }
   
-  .btn-carrito{
-    background-color: #56C0E7;
-    color: #fafafa;
-    border-radius: 30px;
-    padding: 5px 6px 5px 6px;
-    font-size: large;
-    font-weight: bold;
-    border: none;
-    display: flex;
-  }
-
-  .btn-carrito:hover{
-    background-color: #9a9a9a;
-  }
+  
 
   .menu-logo {
     line-height: 0;
@@ -198,4 +186,18 @@ body {
     .menu li {
       padding: 0 20px;
     }
+  }
+  .btn-carrito{
+    background-color: #56C0E7;
+    color: #fafafa;
+    border-radius: 30px;
+    padding: 5px 6px 5px 6px;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    display: flex;
+  }
+
+  .btn-carrito:hover{
+    background-color: #9a9a9a;
   }

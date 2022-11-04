@@ -6,25 +6,25 @@ const Links = () => {
              <div className="menu">
                     <ul>
                         <li>
-                            <a className='menu-h1'>
-                                Pesas
+                            <a href='/' className='menu-h1'>
+                                
                             </a>
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <a href="#home">
-                                home
+                                Mancuernas
                             </a>
                         </li>
                         <li>
                             <a href="#categorias">
-                                categorías
+                                Discos
                             </a>
                         </li>
                         <li>
                             <a href="#contacto">
-                                contacto
+                                Accesorios
                             </a>
                         </li>
                         <button className='btn-carrito '>
