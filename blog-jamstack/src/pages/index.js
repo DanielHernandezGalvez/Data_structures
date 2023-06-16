@@ -6,6 +6,7 @@ import Link from "next/link.js";
 
 import Navbar from "../../components/Navbar/Navbar.js";
 import Body from "../../components/Body/Body.jsx";
+import Footer from "../../components/Footer.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function Home() {
       <div>
         <Navbar />
         <Body />
+        <Footer />
       </div>
     </>
   );
