@@ -4,13 +4,12 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link.js";
 
-import { getAllFilesMetaData } from "../../lib/mdx.js";
 import Navbar from "../../components/Navbar/Navbar.js";
 import Body from "../../components/Body/Body.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -25,13 +24,4 @@ export default function Home({ posts }) {
       </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const posts = await getAllFilesMetaData();
-  console.log(posts);
-
-  return {
-    props: { posts },
-  };
 }

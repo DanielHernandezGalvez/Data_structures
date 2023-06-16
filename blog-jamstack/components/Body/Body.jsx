@@ -21,7 +21,7 @@ export default function Body() {
     <div className="card-container">
       {data.map((dato) => (
         <div className="card" key={dato.id}>
-          <p>{dato.title}</p>
+          <h3>{dato.title}</h3>
           <div className="image-container">
             <Image
               src={dato.img}
@@ -30,6 +30,7 @@ export default function Body() {
               className="rounded-image"
             />
           </div>{" "}
+          <h4>Categoría: {dato.categoria}</h4>
         </div>
       ))}
     </div>

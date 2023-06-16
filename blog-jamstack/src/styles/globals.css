@@ -135,7 +135,7 @@ a:hover {
   font-family: sans-serif;
   transition: 0.3s ease all;
   position: relative;
-  height: 300px; /* Ajusta la altura según tus necesidades */
+  height: 400px; /* Ajusta la altura según tus necesidades */
   overflow: hidden;
 }
 
