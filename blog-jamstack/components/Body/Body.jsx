@@ -20,18 +20,21 @@ export default function Body() {
   return (
     <div className="card-container">
       {data.map((dato) => (
-        <div className="card" key={dato.id}>
-          <h3>{dato.title}</h3>
-          <div className="image-container">
-            <Image
-              src={dato.img}
-              width={150}
-              height={150}
-              className="rounded-image"
-            />
-          </div>{" "}
-          <h4>Categoría: {dato.categoria}</h4>
-        </div>
+        <>
+          <div className="card" key={dato.id}>
+            <h3>{dato.title}</h3>
+            <div className="image-container">
+              <Image
+                src={dato.img}
+                width={150}
+                height={150}
+                className="rounded-image"
+              />
+            </div>
+            <p>Categoría: {dato.category}</p>
+            <p>{dato.description}</p>
+          </div>
+        </>
       ))}
     </div>
   );

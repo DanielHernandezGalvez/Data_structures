@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-image: url("../../components/Body/TECH.SVG");
+  background-image: url("../../components/Body/TECH.svg");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.9);
   background-position: center;
@@ -135,8 +135,13 @@ a:hover {
   font-family: sans-serif;
   transition: 0.3s ease all;
   position: relative;
-  height: 400px; /* Ajusta la altura según tus necesidades */
+  height: 350px; /* Ajusta la altura según tus necesidades */
   overflow: hidden;
+  padding: 10px 20px;
+}
+
+.card p {
+  text-align: justify;
 }
 
 .card:hover {
@@ -147,7 +152,7 @@ a:hover {
 .image-container {
   margin: auto;
   width: 100%; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: 100%; /* Ajusta la altura de la imagen según tus necesidades */
+  height: 50%; /* Ajusta la altura de la imagen según tus necesidades */
   overflow: hidden;
 }
 
