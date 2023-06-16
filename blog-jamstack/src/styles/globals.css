@@ -137,11 +137,24 @@ a:hover {
   position: relative;
   height: 350px; /* Ajusta la altura según tus necesidades */
   overflow: hidden;
-  padding: 10px 20px;
+  padding: 0px 10px;
+}
+
+.card a {
+  text-decoration: none; /* Quitar la decoración de texto predeterminada */
+  color: inherit; /* Heredar el color de texto del elemento padre */
+  cursor: pointer;
+}
+
+.card h3 {
+  font-family: var(--inconsolata);
+  margin-block-start: 0;
+  margin-block-end: 1em;
 }
 
 .card p {
-  text-align: justify;
+  font-family: var(--inconsolata);
+  text-align: center;
 }
 
 .card:hover {
@@ -250,4 +263,37 @@ a:hover {
   .nav-toggle.open > span:nth-child(3) {
     transform: rotate(-45deg) translate(-5px, 1px);
   }
+}
+
+/* Contenido */
+
+.container-bg {
+  background-color: #00000036;
+  margin: 5% 5%;
+  padding: 3%;
+  border-radius: 4px;
+}
+
+.container-bg h1 {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.container-bg p {
+  color: #fff;
+  margin: 40px;
+}
+
+.codigo {
+  margin: 30px auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+  background-color: #101010;
+  padding: 20px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }

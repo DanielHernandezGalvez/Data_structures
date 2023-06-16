@@ -3,19 +3,18 @@
     "id": 1,
     "title": "Descargar tablas con Excel usando Javascript",
     "img": "/images/javascript.png",
-    "category": "Javascript",
-    "description": "Así s"
+    "category": "Javascript, excel, library, sheetjs"
   },
   {
     "id": 2,
     "title": "Descargar como PDF usando Javascript",
     "img": "/images/javascript.png",
-    "categoria": "Javascript"
+    "category": "Javascript, PDF"
   },
   {
     "id": 3,
     "title": "Imprimir Conteido con Javascript",
     "img": "/images/javascript.png",
-    "categoria": "Javascript"
+    "category": "Javascript, print,"
   }
 ]
