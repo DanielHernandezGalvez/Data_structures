@@ -72,6 +72,8 @@ export default function descargarexcel() {
               // Se utiliza la función 'writeFile' de XLSX para descargar el
               archivo Excel con el nombre "archivo.xlsx"
             </span>
+            <br />
+            {`}; `}
           </p>
         </div>
         <p>
@@ -87,6 +89,10 @@ export default function descargarexcel() {
             exportButton.addEventListener("click", handleExportToExcel);
           </p>
         </div>
+        <p>
+          Espero que te sea útil, que tengas un código sin errores y que la
+          suerte siempre esté de tu lado.
+        </p>
       </div>
       <Footer />
     </>

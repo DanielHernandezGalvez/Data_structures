@@ -23,7 +23,7 @@ export default function Body() {
       {data.map((dato) => (
         <>
           <div className="card" key={dato.id}>
-            <Link href="/javascript/descargarexcel">
+            <Link href={dato.url}>
               <h3>{dato.title}</h3>
               <div className="image-container">
                 <Image

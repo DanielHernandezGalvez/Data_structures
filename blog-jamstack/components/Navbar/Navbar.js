@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <div>
       <header>
-        <a href="#" className="logo">
+        <a href="/" className="logo">
           <Image src={logo} width={150} />
         </a>
         <div className="menutoggle" onclick="togglemenu();"></div>
