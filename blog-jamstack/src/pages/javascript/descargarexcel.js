@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer";
+import Recomendados from "../../../components/Recomendados";
 
 export default function descargarexcel() {
   return (
@@ -94,6 +95,7 @@ export default function descargarexcel() {
           suerte siempre esté de tu lado.
         </p>
       </div>
+      <Recomendados />
       <Footer />
     </>
   );
