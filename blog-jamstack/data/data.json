@@ -16,5 +16,11 @@
     "title": "Imprimir Conteido con Javascript",
     "img": "/images/javascript.png",
     "category": "Javascript, print,"
+  },
+  {
+    "id": 4,
+    "title": "Descargar Archivo pdf desde el HTML",
+    "img": "/images/javascript.png",
+    "category": "HTML, Download,"
   }
 ]
