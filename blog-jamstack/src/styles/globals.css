@@ -34,6 +34,12 @@ header {
   height: 60px;
 }
 
+.titulo-principal {
+  color: #41e8f0;
+  margin: 20px 10px;
+  text-align: center;
+}
+
 .logo {
   padding-top: 5px;
   margin: 0;
@@ -185,33 +191,46 @@ a:hover {
 /* Recomendados */
 
 .recomended-container {
+  margin: auto;
   width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #ffbf95af;
+  background-color: #00000036;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 30px 0;
+}
+
+.titulo-recomendados {
+  color: white;
+  width: 100%;
+  margin: 0 0 0 10px;
 }
 
 .recomended {
-  box-sizing: border-box;
+  margin: 10px auto;
+  height: 300px;
   display: block;
   text-align: center;
   justify-content: center;
   max-width: 200px;
+  min-width: 100px;
   backdrop-filter: blur(3px);
-  border: solid #41e8f0 1px;
-
+  background-color: #ffbf95af;
   color: white;
   font-family: sans-serif;
   transition: 0.3s ease all;
   position: relative;
-  height: auto;
   overflow: hidden;
-  padding: 0px 10px;
+  padding: 0;
+  border-radius: 5px;
 }
 
 .recomended h3 {
   font-size: 12px;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* Categorías */

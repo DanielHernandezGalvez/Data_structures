@@ -17,7 +17,7 @@ export default function Recomendados() {
   const getData = () => {
     try {
       const info = require("../data/data.json");
-      const shuffledData = shuffleArray(info).slice(0, 3); // Mezcla y selecciona solo 3 objetos
+      const shuffledData = shuffleArray(info).slice(0, 6); // Mezcla y selecciona solo 3 objetos
       setData(shuffledData);
       console.log(data);
     } catch (error) {
@@ -30,24 +30,30 @@ export default function Recomendados() {
   }, []);
 
   return (
-    <div className="recomended-container">
-      {data.map((dato) => (
-        <div className="recomended" key={dato.id}>
-          <Link href={dato.url}>
-            <h3>{dato.title}</h3>
-            <div className="image-container">
-              <Image
-                src={dato.img}
-                width={150}
-                height={150}
-                className="rounded-image"
-              />
-            </div>
-            <p>Etiquetas: {dato.category}</p>
-            <p>{dato.description}</p>
-          </Link>
+    <>
+      <div className="recomended-container">
+        <div className="titulo-recomendados">
+          {" "}
+          <h2>Puede interesarte: </h2>
         </div>
-      ))}
-    </div>
+        {data.map((dato) => (
+          <div className="recomended" key={dato.id}>
+            <Link href={dato.url}>
+              <h3>{dato.title}</h3>
+              <div className="image-container">
+                <Image
+                  src={dato.img}
+                  width={150}
+                  height={150}
+                  className="rounded-image"
+                />
+              </div>
+              {/* <p>Etiquetas: {dato.category}</p>
+            <p>{dato.description}</p> */}
+            </Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
