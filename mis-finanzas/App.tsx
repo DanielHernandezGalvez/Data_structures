@@ -15,6 +15,7 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
+  SafeAreaView,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -122,7 +123,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <View style={styles.body}>
+    <SafeAreaView style={styles.body}>
       <View style={styles.capital}>
         <Text style={[styles.p, styles.text]}>Capital: </Text>
         <Text style={[styles.h1, styles.text]}> $ {handleResta()}</Text>
@@ -292,7 +293,7 @@ const App: React.FC = () => {
           </View>
         </View>
       </Modal>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -302,7 +303,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#102A33",
-    paddingTop: "10%",
+    paddingTop: "3%",
   },
   capital: {
     backgroundColor: "#FFAC57",
