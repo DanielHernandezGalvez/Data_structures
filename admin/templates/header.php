@@ -12,5 +12,10 @@
 
     <div class="dasboard d-flex justify-content-between">
         <div class="sidebar bg-dark vh-100">
-            <h1 class="bg-primary"><a href="" class="text-light text-decoration-none">Dashboard</a></h1>
+            <h1 class="bg-primary"><a href="./index.php" class="text-light text-decoration-none">Dashboard</a></h1>
+            <div class="menus p-4 mt-5">
+                <div class="menu">
+                    <a class="text-light text-decoration-none" href="create.php "><strong>Add new Post</strong></a>
+                </div>
+            </div>
         </div>

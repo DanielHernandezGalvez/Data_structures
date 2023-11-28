@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST["create"])) {
+if (isset($_POST["create"])) {
     include("../connect.php");
     $title = mysqli_escape_string($conn, $_POST["title"]);
     $summary = mysqli_escape_string($conn, $_POST["summary"]);
@@ -8,14 +8,28 @@ if(isset($_POST["create"])) {
 
     $sqlinsert = "INSERT INTO posts(date, title, summary, content) VALUES ('$date', '$title', '$summary', '$content')";
 
-    if(mysqli_query($conn, $sqlinsert)){
-
+    if (mysqli_query($conn, $sqlinsert)) {
+        header("Location:index.php");
     } else {
         die("Data is not inserted");
     }
-    // echo $title;
-    // echo $summary;
-    // echo $content;
-    // echo $date;
+}
+?>
+
+<?php
+if (isset($_POST["update"])) {
+    include("../connect.php");
+    $title = mysqli_escape_string($conn, $_POST["title"]);
+    $summary = mysqli_escape_string($conn, $_POST["summary"]);
+    $content = mysqli_escape_string($conn, $_POST["content"]);
+    $date = mysqli_escape_string($conn, $_POST["date"]);
+    $id = mysqli_escape_string($conn, $_POST["id"]);
+    $sqlUpdate = "UPDATE posts SET title = '$title', summary = '$summary', content = '$content', date = '$date' WHERE id = $id ";
+
+    if (mysqli_query($conn, $sqlUpdate)) {
+        header("Location:index.php");
+    } else {
+        die("Data is not updated");
+    }
 }
 ?>
