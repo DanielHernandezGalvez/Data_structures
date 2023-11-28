@@ -18,7 +18,7 @@ include("templates/header.php");
 
         <input type="hidden" name="date" value="<?php echo date("Y/m/d") ?>">
 
-        <div class="form-field">
+        <div class="form-field my-4">
             <input type="submit" class="btn btn-primary" value="Submit" name="create">
         </div>
     </form>
