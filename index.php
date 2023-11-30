@@ -20,24 +20,29 @@
             $result = mysqli_query($conn, $sqlSelect);
             while ($data = mysqli_fetch_array($result)) {
             ?>
-                <div class="row mb-4 p-5 bg-light">
-                    <div class="col-sm-2">
-                        <?php echo $data["date"]; ?>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2><?php echo $data["title"]; ?></h2>
-                    </div>
-                    <div class="col-sm-5">
-                        <?php echo $data["content"]; ?>
-                    </div>
-                    <div class="col-sm-2">
-                        <a href="view.php?id=<?php echo $data["id"]; ?>" class="btn btn-primary">READ MORE</a>
+                <div class="post">
+                    <div class="row mb-4 p-5 bg-light">
+                        <div class="col-sm-2">
+                            <?php echo $data["date"]; ?>
+                        </div>
+                        <div class="col-sm-3">
+                            <h2><?php echo $data["title"]; ?></h2>
+                        </div>
+                        <div class="col-sm-5">
+                            <?php echo $data["content"]; ?>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="view.php?id=<?php echo $data["id"]; ?>" class="btn btn-primary">READ MORE</a>
+                        </div>
                     </div>
                 </div>
             <?php
             }
             ?>
         </div>
+    </div>
+    <div class="footer bg-dark p-4 mt-4">
+        <a href="admin/index.php" class="text-light text-decoration-none">Admin Panel</a>
     </div>
 </body>
 
