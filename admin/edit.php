@@ -38,7 +38,6 @@ if ($id) {
             <div class="form-field my-4">
                 <input type="submit" class="btn btn-primary" value="Submit" name="update">
             </div>
-
         <?php
         }
         ?>
