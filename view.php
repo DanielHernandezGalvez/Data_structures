@@ -15,6 +15,7 @@
     <div class="post-list mt-5">
         <div class="container">
             <?php
+            $id = $_GET["id"];
             include("connect.php");
             $sqlSelect = "SELECT * FROM posts";
             $result = mysqli_query($conn, $sqlSelect);
@@ -31,7 +32,7 @@
                         <?php echo $data["content"]; ?>
                     </div>
                     <div class="col-sm-2">
-                        <a href="view.php?id=<?php echo $data["id"]; ?>" class="btn btn-primary">READ MORE</a>
+                        <a href="view.php<?php echo $data["id"]; ?>" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
             <?php
