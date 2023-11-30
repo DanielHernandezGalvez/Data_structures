@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if(!isset($_SESSION["user"])){
+    header("Location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +22,9 @@
             <div class="menus p-4 mt-5">
                 <div class="menu">
                     <a class="text-light text-decoration-none" href="create.php "><strong>Add new Post</strong></a>
+                </div>
+                <div class="menu mt-5">
+                    <a class="btn btn-info" href="logout.php">Log out</a>
                 </div>
             </div>
         </div>
