@@ -7,7 +7,7 @@ if (isset($_POST["create"])) {
     $date = mysqli_escape_string($conn, $_POST["date"]);
 
     $sqlinsert = "INSERT INTO posts(date, title, summary, content) VALUES ('$date', '$title', '$summary', '$content')";
-
+        
     if (mysqli_query($conn, $sqlinsert)) {
         session_start();
         $_SESSION["create"] = "Post created succesfully";
