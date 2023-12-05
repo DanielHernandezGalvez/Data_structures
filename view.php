@@ -10,7 +10,9 @@
 
 <body>
     <header class="p-4 bg-dark text-center">
-        <h1><a href="index.php" class="text-white text-decoration-none">Simple blog</a></h1>
+        <h1>
+            <a href="index.php" class="text-white text-decoration-none">Simple blog</a>
+        </h1>
     </header>
     <div class="post-list mt-5">
         <div class="container">
@@ -22,11 +24,11 @@
                 $result = mysqli_query($conn, $sqlSelect);
                 while ($data = mysqli_fetch_array($result)) {
             ?>
-                   <div class="post bg-light p-4 mt-5">
-                    <h1><?php echo $data["title"]; ?></h1>
-                    <p><?php echo $data["date"]; ?></p>
-                    <p><?php echo $data["content"]; ?></p>
-                </div>
+                    <div class="post bg-light p-4 mt-5">
+                        <h1><?php echo $data["title"]; ?></h1>
+                        <p><?php echo $data["date"]; ?></p>
+                        <p><?php echo $data["content"]; ?></p>
+                    </div>
             <?php
                 }
             } else {
