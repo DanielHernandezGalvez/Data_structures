@@ -14,6 +14,7 @@
             <a href="index.php" class="text-white text-decoration-none">Simple blog</a>
         </h1>
     </header>
+    
     <div class="post-list mt-5">
         <div class="container">
             <?php
