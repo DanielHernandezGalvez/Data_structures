@@ -39,9 +39,9 @@
             
             <?php
                 }
-            } else {
+              } else {
                 echo "No post found";
-            }
+              }
 
             ?>
 
