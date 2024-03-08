@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <header class="p-4 bg-dark text-center">
         <h1><a href="index.php" class="text-white text-decoration-none">Simple blog</a></h1>
     </header>
