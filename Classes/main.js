@@ -3,7 +3,7 @@ kramer.name = "Dinz";
 kramer.age = 27;
 // console.log(kramer);
 
-// Clase
+// ***Clase*** //
 
 class People {
   constructor(name, lastname) {
@@ -22,7 +22,7 @@ const dinz = new People("dinz", "kramer");
 const sonia = new People("sonia", "alejandra");
 // console.log(sonia.hi());
 
-// Herencia
+// ***Herencia**** //
 
 class Student extends People {
   constructor(name, lastname, carrer) {
@@ -38,5 +38,36 @@ class Student extends People {
 
 // objeto hijo
 const maria = new Student("maria", "becerra", "diseño");
-console.log(maria);
-console.log(maria.hi());
+// console.log(maria);
+// console.log(maria.hi());
+
+// ***Referencias*** //
+
+/* Valores primitivos
+String, number, biginit, boolean, undeguned y simbol*/
+
+let number = 4
+
+function edit(num, value) {
+  num = value;
+  console.log("El valor interno es: " + num)
+}
+
+edit(number, 10)
+console.log("El valor interno es: " + number)
+
+class A {
+  constructor(number) {
+    this.number = number;
+  }
+}
+
+let a = new A(4)
+
+function editObject(obj, value){
+  obj.number = value;
+  console.log("El valor interno es: " + obj.number)
+}
+
+editObject(a, 10)
+console.log("el valor externo es: "+ a.number)
