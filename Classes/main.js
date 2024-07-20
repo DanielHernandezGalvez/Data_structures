@@ -35,8 +35,6 @@ class Student extends People {
 
 // objeto hijo
 const maria = new Student("maria", "becerra", "diseño");
-// console.log(maria);
-// console.log(maria.hi());
 
 // ***Referencias*** //
 
