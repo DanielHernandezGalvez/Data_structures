@@ -1,7 +1,6 @@
 const kramer = new Object();
 kramer.name = "Dinz";
 kramer.age = 27;
-// console.log(kramer);
 
 // ***Clase*** //
 
