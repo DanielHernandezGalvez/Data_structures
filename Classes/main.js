@@ -18,7 +18,6 @@ class People {
 const dinz = new People("dinz", "kramer");
 
 const sonia = new People("sonia", "alejandra");
-// console.log(sonia.hi());
 
 // ***Herencia**** //
 
