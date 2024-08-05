@@ -48,9 +48,7 @@ const s = sum;
 // funciones de orden superior
 function some(fn) {
   // console.log("se hace algo antes");
-
   fn();
-
   // console.log("se hace algo después");
 }
 
