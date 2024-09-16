@@ -39,7 +39,9 @@ const maria = new Student("maria", "becerra", "diseño");
 // ***Referencias*** //
 
 /* Valores primitivos
-String, number, biginit, boolean, undeguned y simbol*/
+String, number,
+biginit, boolean, 
+undeguned y simbol*/
 
 let number = 4
 
