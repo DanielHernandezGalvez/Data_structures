@@ -64,3 +64,5 @@ for clave,valor in diccionario_colores.items():
     print(clave,valor)
 
 print(diccionario_colores)
+
+# print(diccionario_colores.keys())
