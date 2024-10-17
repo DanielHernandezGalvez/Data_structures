@@ -36,4 +36,4 @@ def anagrama(str1, str2):
         
     return True
 
-anagrama("paris", "prisa")
+print(anagrama("poder", "pedro"))
