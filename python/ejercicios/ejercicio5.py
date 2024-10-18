@@ -5,7 +5,19 @@ buscar([1,2,3,"hola"], [2,3]) --> [1,"hola"]
 """
 
 def buscar(lista1,lista2):
-    return [elemento for elemento in lista1 if elemento not in lista2]  
+    # return [elemento for elemento in lista1 if elemento not in lista2]  
+
+    resultado = []
+
+    for num in lista1:
+        if num not in lista2:
+            resultado.append(num)
+
+    for num in lista2:
+        if num not in lista1:
+            resultado.append(num)
+
+    return resultado
 
 
 
