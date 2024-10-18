@@ -19,7 +19,24 @@ def buscar(lista1,lista2):
 
     return resultado
 
+# Clase de pruebas para la función "buscar"
+from nose.tools import assert_equal
 
+class Pruebas_buscar(object):
+    def test_buscar(self):
+        # Pruebas de diferentes casos
+        assert_equal(buscar([1, 2, 3, 4, 5, 6], [6, 3, 2, 3]), [1, 4, 5])
+        assert_equal(buscar([1, 2, 3, "hola"], [2, 3]), [1, "hola"])
+        assert_equal(buscar([], [1, 2, 3]), [])
+        assert_equal(buscar([1, 2, 3], [1, 2, 3]), [])
+        assert_equal(buscar([1, 2, 3], []), [1, 2, 3])
+        assert_equal(buscar(["a", "b", "c"], ["b"]), ["a", "c"])
 
+        print("¡Todos los tests pasaron!")
 
 print(buscar([1,2,3,"hola"], [2,3]))
+
+# Ejecución de las pruebas
+prueba = Pruebas_buscar()
+prueba.test_buscar()
+
