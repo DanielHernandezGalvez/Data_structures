@@ -21,4 +21,36 @@ class Duplicados:
 d = Duplicados()
 print(d.contiene_duplicados([1,2,3,4]))
 
-        
+from nose.tools import assert_equal
+
+class TestDuplicados:
+    
+    def test_con_duplicados(self):
+        d = Duplicados()
+        assert_equal(d.contiene_duplicados([1, 2, 3, 4, 1]), True)
+        assert_equal(d.contiene_duplicados([5, 5, 5, 5]), True)
+    
+    def test_sin_duplicados(self):
+        d = Duplicados()
+        assert_equal(d.contiene_duplicados([1, 2, 3, 4]), False)
+        assert_equal(d.contiene_duplicados([7, 8, 9]), False)
+    
+    def test_lista_vacia(self):
+        d = Duplicados()
+        assert_equal(d.contiene_duplicados([]), False)
+    
+    def test_un_solo_elemento(self):
+        d = Duplicados()
+        assert_equal(d.contiene_duplicados([1]), False)
+
+        print(d.contiene_duplicados([1,2,3,4]))
+
+# Ejecutar los tests
+if __name__ == '__main__':
+    t = TestDuplicados()
+    t.test_con_duplicados()
+    t.test_sin_duplicados()
+    t.test_lista_vacia()
+    t.test_un_solo_elemento()
+
+    print("Todos los tests pasaron correctamente.")
