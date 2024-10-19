@@ -30,4 +30,36 @@ def comprimir(cadena):
 
     return resultado
 
+from nose.tools import assert_equal
+
+class TestComprimir:
+    
+    def test_cadena_normal(self):
+        assert_equal(comprimir("AAB"), "A2B1")
+        assert_equal(comprimir("AAAABBBCCdaaa"), "A4B3C2d1a3")
+    
+    def test_cadena_vacia(self):
+        assert_equal(comprimir(""), "")
+    
+    def test_un_solo_caracter(self):
+        assert_equal(comprimir("A"), "A1")
+    
+    def test_sin_repeticiones(self):
+        assert_equal(comprimir("ABC"), "A1B1C1")
+    
+    def test_mayusculas_minusculas(self):
+        assert_equal(comprimir("aAaA"), "a1A1a1A1")
+
 print(comprimir("AAAABBBCCdaaa"))
+
+# Ejecutar los tests
+if __name__ == '__main__':
+    t = TestComprimir()
+    t.test_cadena_normal()
+    t.test_cadena_vacia()
+    t.test_un_solo_caracter()
+    t.test_sin_repeticiones()
+    t.test_mayusculas_minusculas()
+    
+    print("Todos los tests pasaron correctamente.")
+
