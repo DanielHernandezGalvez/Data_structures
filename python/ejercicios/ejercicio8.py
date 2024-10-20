@@ -8,14 +8,17 @@ mejora: devolver una lista en lugar de imprimir el resultado
 
 class Solucion:
     def suma_2_elementos(self, numeros, suma):
+
+        resultado = []
+
         diccionario = {} # valor: indice  1:0
 
         for indice, numero in enumerate(numeros):
             diferencia = suma - numero
             if diferencia in diccionario:
-                print([diccionario[diferencia], indice])
+                resultado.append([diccionario[diferencia], indice])
             diccionario[numero] = indice
         return
 
 s = Solucion()
-s.suma_2_elementos([11,2,3,4,5,6,2], 4)
+print(s.suma_2_elementos([1,2,3,4,5,6,2], 4))
