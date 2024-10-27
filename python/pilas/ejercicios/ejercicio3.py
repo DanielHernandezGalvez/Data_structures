@@ -11,3 +11,27 @@ balanceados ('[](){}') --> True
 balanceados ('[()]') --> True
 balanceados ('[](') --> True
 """
+
+def balanceados(cadena):
+    if len(cadena) % 2 != 0:
+        return False
+    
+    abiertos = set("({[")
+    emparejamientos = set([ ( '(', ')' ), ( '[', ']' ), ( '{', '}' ), ])
+    
+    pila = []
+    
+    for elemento in cadena:
+        if elemento in abiertos:
+            pila.append(elemento)
+        else:
+            if len(cadena) == 0:
+                return False
+            
+            anterior = pila.pop()
+            if (anterior, elemento) not in emparejamientos:
+                return False
+            
+    return len(pila) == 0
+
+print(balanceados ('[]('))
