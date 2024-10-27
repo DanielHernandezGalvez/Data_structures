@@ -9,7 +9,7 @@ Pista: utilizar pilas para ir almacenando los elementos (parentesis, corchetes y
 balanceados ('[]') --> True
 balanceados ('[](){}') --> True
 balanceados ('[()]') --> True
-balanceados ('[](') --> True
+balanceados ('[](') --> False
 """
 
 def balanceados(cadena):
@@ -34,4 +34,19 @@ def balanceados(cadena):
             
     return len(pila) == 0
 
+
+
+from nose.tools import assert_equal
+
+class Probar_balanceor():
+    def probar(self):
+        assert_equal(balanceados('[]('), False)
+        assert_equal(balanceados('[()]'), True)
+        print("todos los test se han ejecutado con exito")
+        
+
 print(balanceados ('[]('))
+
+        
+p = Probar_balanceor()
+p.probar()
