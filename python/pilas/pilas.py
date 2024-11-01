@@ -28,7 +28,6 @@ p.insertar("libro verde")
 p.insertar("libro azul")
 p.insertar("libro rojo")
 
-
 p.longitud()
 
 print(p.longitud())
