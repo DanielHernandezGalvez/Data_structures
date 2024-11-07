@@ -32,6 +32,6 @@ def operaciones_con_listas(lista_numeros):
     
     # Retornar todos los resultados en una lista
     return [suma, valor_max, valor_min, lista_ordenada, lista_cuadrados]
-    print(suma)
+
 
 
