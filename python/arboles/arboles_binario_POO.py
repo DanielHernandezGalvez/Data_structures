@@ -32,8 +32,42 @@ class Arbol_binario():
     def set_raiz(self,nuevo_valor):
         self.valor = nuevo_valor
         
-a = Arbol_binario("a")
-a.get_raiz()
-a.insertar_derecha("c")
-a.insertar_izquierda("b")
-print(a.get_izquierdo().valor)
+arbol = Arbol_binario("a")
+arbol.get_raiz()
+arbol.insertar_izquierda("b2")
+arbol.insertar_izquierda("b")
+arbol.insertar_derecha("c2")
+arbol.insertar_derecha("c")
+# print(arbol.get_izquierdo().valor)
+
+# RECORRER EL ARBOL preorder, inorder, postorder
+
+# PREORDER raiz en primera posicion
+
+def preorder(arbol):
+    if arbol:
+        print(arbol.get_raiz())
+        preorder(arbol.get_izquierdo())
+        preorder(arbol.get_derecho())
+        
+# print(preorder(arbol))
+
+# INORDER la raiz va en el centro
+
+def inorder(arbol):
+    if arbol:
+        inorder(arbol.get_izquierdo())
+        print(arbol.get_raiz())
+        inorder(arbol.get_derecho())
+        
+# print(inorder(arbol))
+
+# POSTORDER raiz en ultima posicion
+
+def post_order(arbol):
+    if arbol != None:
+        post_order(arbol.get_izquierdo())
+        post_order(arbol.get_derecho())
+        print(arbol.get_raiz())
+        
+print(post_order(arbol))
